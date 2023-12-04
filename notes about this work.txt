@@ -1,0 +1,54 @@
+Hello,
+
+TP4:
+
+*vid1:
+
+so we first created seperated Spring projects which are different microservices for an entirety of an Ecommerce web app.
+After that, we pretty much created a new empty project and once we did that, we used "models" in order to work with the
+different microservices in one working directory.
+
+we were advised to download "Hashicorp consul", which is a service networking solution that enables teams to manage secure network connectivity between services and across on-prem and multi-cloud environments and runtimes.
+
+using the Actuator also make it so that whenever a variable changes its value, the microservice will automatically change 
+the exact variables without the need of restarting the entire microservice, only using the annotation @RefreshScope.
+
+so in order for this to happen, we need to basically to a git commit on the directory which contains the entirety of the 
+.properties files, and that's when the exact changes will happen.
+
+after that we went to add spring data rest by adding 3 customers from the app's main using CommandRunnerLine,
+and then we tested it out using the H2 database (connected to using using the SA default user) and ofc using the other method which is accessing the link of the customers and reading out the JSON file which contains all of the customers.
+
+in a nutshell, the gateway serves the purpose of navigating through every single ms, for example, we made it so that
+the gateway can access to the customer-service's links and functionnalities by using the @Bean annotation, and inside of 
+it we find a DiscoveryClientRouteDefinitionLocator with the properties: ReactiveDiscoveryClient and DiscoveryLocatorProperties.
+
+From their names, they pretty much indicate that the gateway-service is created to discover and access the microservices.
+
+*vid2:
+
+So far we are working on the inventory-service.
+
+We moved on to Order-Service where we created all the necessary classes related to ProductItem and Order
++ we added 2 more dependencies which are HATEOAS (pagedModel) and OPENFEIGN
+
+*vid3:
+
+I think this is the part where we're going to create a log 
+
+*vid4:
+
+for this part, we are going to utilize the Consul Configuration part, aka going to the Consul Key/Value navigation and then creating different tokens for our MS.
+
+we first create a Billing service with the consul configs to utilize Tokens generated and refreshed by Consul itself
+
+Using this feature, Consul not only allows us to change the values from the interface, but it does it in a way which calls the MS Billing-Service and automatically does and applies the changes without using Spring Cloud Config.
+
+now we're moving on to using the Hashicorp, (again) but this time "Vault".
+
+once we enter the command "vault server -dev" we get the link with the credentials to use in order to connect.
+
+we can modify the password inside of the Vault interface or using the Terminal, the way this works is that it's all about securing our data, and ofc you always have options to include crypto methods inside the env. in a nutshell (EaaS: Encryption As A Service or SSaaS: Secured Software As A Service).
+
+the MS contains the public and private keys and using Vault, it actually helps managing secret keys towards the other MicroServices. that way not any MicroService can access to the Billing Microservice and some way an authentication "test".
+
