@@ -28,6 +28,6 @@ export class CustomersComponent implements OnInit {
   }
 
   getOrders(c: any) {
-
+    this.router.navigate([`/orders/${c.id}`]);
   }
 }
