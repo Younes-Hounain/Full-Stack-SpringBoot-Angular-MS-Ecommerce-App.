@@ -23,4 +23,12 @@ public class Order {
     private Customer customer;
     @OneToMany(mappedBy = "order")
     private List<ProductItem> productItems;
+
+    public double getTotalAmount(){
+        double amount=0;
+        for (ProductItem productItem : productItems) {
+            amount+=productItem.getAmount();
+        }
+        return amount;
+    }
 }
