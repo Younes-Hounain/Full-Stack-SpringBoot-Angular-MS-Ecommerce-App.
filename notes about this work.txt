@@ -34,7 +34,7 @@ We moved on to Order-Service where we created all the necessary classes related 
 
 *vid3:
 
-I think this is the part where we're going to create a log 
+I think this is the part where we're going to create a log so that we get more informations regarding the work behind the scene
 
 *vid4:
 
@@ -51,4 +51,8 @@ once we enter the command "vault server -dev" we get the link with the credentia
 we can modify the password inside of the Vault interface or using the Terminal, the way this works is that it's all about securing our data, and ofc you always have options to include crypto methods inside the env. in a nutshell (EaaS: Encryption As A Service or SSaaS: Secured Software As A Service).
 
 the MS contains the public and private keys and using Vault, it actually helps managing secret keys towards the other MicroServices. that way not any MicroService can access to the Billing Microservice and some way an authentication "test".
+
+*vid5:
+
+we now move on to the front end part where we created an Angular project and linked it with the backend and created a simple navbar which contains products, customers. with products showing us the products available and fetched from the backend (Spring Boot) and the same thing goes for Customers, with the addition of viewing each customer's order details.
 

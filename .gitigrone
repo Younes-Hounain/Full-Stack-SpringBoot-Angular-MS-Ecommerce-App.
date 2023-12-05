@@ -6,11 +6,15 @@ tmp/
 app/**/*.js
 app/**/*.js.map
 
+# custom files/folders
+notes\ about\ this\ work.txt/
+screenshots/
+
 # dependencies
 node_modules/
 bower_components/
-screenshots/
-notes about this work.txt/
+
+
 
 # IDEs and editors
 .idea/
