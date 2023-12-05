@@ -1,4 +1,4 @@
-# Full Stack Spring Boot 3 Angular 17 Ecommerce Web App
+# Full Stack Spring Boot 3.2 Angular 17 Ecommerce Web App
 
 ## Overview
 
@@ -12,7 +12,10 @@ This repository contains the source code for a Full Stack Ecommerce Web App buil
 ### Inventory Service
 ### Orders Service
 ### Billing Service
-### Vault
-### Consul
 
+## Technologies Used
+☼Spring Boot 3
+☼Angular 17
+☼HashiCorp Consul
+☼HashiCorp Vault
 
